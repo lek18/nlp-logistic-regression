@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "nlp-logistic-regression"
+version = "0.1.0"
+description = ""
+authors = ["Luis Ek <52711401+lek18@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "nlp_logistic_regression"}]
+
+[tool.poetry.dependencies]
+python = "^3.9.16"
+Flask = "^2.2.3"
+scikit-learn = "^1.2.1"
+pytest = "^7.2.1"
+black = "^23.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.toml
+  |\.sh
+  |\.git
+  |\.ini
+  |Dockerfile
+  |Jenkinfile
+)/
+'''
